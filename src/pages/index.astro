@@ -1,0 +1,27 @@
+---
+import Layout from "../components/Layout.astro";
+import Card from "../components/Card.astro";
+const items = ["Dog", "Cat", "Platypus"];
+
+---
+
+<Layout>
+  <Card title="Title" img="https://placeimg.com/640/480/any" alt="Any" body="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt error laboriosam soluta quam labore minima natus accusamus harum? Incidunt accusantium eius aut molestias, vel maiores cupiditate unde reiciendis inventore quo?"/>
+  <button id="btn">Click me</button>
+  <ul>
+    {items.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <script>
+    function handleClick() {
+      alert("hola")
+      console.log("btn click")
+    }
+    
+    document.getElementById("btn")?.addEventListener("click", handleClick);
+
+  </script>
+
+<script src="../index.ts"></script>
+</Layout>

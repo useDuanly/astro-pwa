@@ -1,0 +1,38 @@
+---
+
+
+const {title,img,alt,body} = Astro.props
+interface Props {
+  title: string,
+  img: string,
+  alt: string,
+  body: string
+}
+---
+
+<article>
+  <h2>{title}</h2>
+  <img src={img} alt={alt}>
+  <p>{body}</p>
+  <style>
+   
+
+    article{
+      background-color: aliceblue;
+      border: solid 1px black;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    article img{
+      width: 200px;
+      margin: 0 auto;
+      height: 200px;
+      border-radius: 4rem;
+    }
+    article h2 {
+      text-align: center;
+    }
+
+  </style>
+</article>
