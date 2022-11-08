@@ -1,0 +1,104 @@
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>404</title>
+	</head>
+
+	<body>
+		<h1>Error 404</h1>
+    <nav>
+      <ul class="navigation">
+        <li><a class="item" href="#">Home</a></li>
+        <li><a class="item"  href="#">About</a></li>
+        <li><a class="item"  href="#">Products</a></li>
+        <li><a class="item"  href="#">Contact</a></li>
+      </ul>
+    </nav>
+		
+    
+    <main>
+      <slot/>
+    </main>
+    <footer class="footer">
+      <section class="footer_content">
+        <div>
+          <h3>Made in Canarias</h3>
+
+        </div>
+        <div>
+          <p>Lorem, ipsum dolor sit amet consectetur </p>
+        </div>
+      </section>
+    </footer>
+      
+	
+	</body>
+</html>
+<style >
+
+  .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    
+    list-style: none;
+    margin: 0; 
+    background: rgb(71, 63, 63);
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    background: #222;
+  }
+
+  .footer{
+
+    background-color:rgb(71, 63, 63);
+    padding: 1rem;
+  }
+  .footer_content{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  
+  @media all and (max-width: 800px) {
+    .navigation {
+      justify-content: space-around;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+  
+  
+  
+  
+    
+    </style>
