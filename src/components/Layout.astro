@@ -10,7 +10,7 @@
 	</head>
 
 	<body>
-    <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+    <h1> Build faster websites <a href="https://astro.build/" target="_blank" >Astro</a></h1>
     <nav>
       <ul class="navigation">
         <li><a class="item" href="#">Home</a></li>
@@ -23,7 +23,18 @@
       <slot/>
     </main>
       
-	
+	  <footer class="footer">
+      <section class="footer_content">
+        <div>
+          <h3>Made in Canarias</h3>
+
+        </div>
+        <div>
+          <p>Developer: Duanly </p>
+          
+        </div>
+      </section>
+    </footer>
 	</body>
   <style >
 
@@ -46,6 +57,18 @@
 
 .navigation a:hover {
   background: #222;
+}
+.footer{
+
+background-color:rgb(71, 63, 63);
+padding: 1rem;
+}
+.footer_content{
+color: white;
+display: flex;
+align-items: center;
+flex-flow: row wrap;
+justify-content: space-between;
 }
 
 @media all and (max-width: 800px) {
